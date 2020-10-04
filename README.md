@@ -1,4 +1,4 @@
-# Tass kafka
+# plain-kafka
 
 Producer and consumer (worker) for working with kafka.
 
