@@ -13,7 +13,6 @@ def _encode_msg(msg) -> Union[str, bytes]:
     """Returns bytes msg if receive bytes, else try to serialise obj to str for comfort reading value in kafka topics"""
     if isinstance(msg, str) or isinstance(msg, bytes):
         return msg
-    # if msg is tass entity
     elif hasattr(msg, 'make_dump'):
         encoded_msg = json.dumps(msg.make_dump(), default=str)
     elif is_dataclass(msg):

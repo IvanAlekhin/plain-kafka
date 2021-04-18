@@ -54,7 +54,7 @@ async def async_service(kafka_msg):
 
 
 # For more security use environment variables for credentials. 
-consumer_config = {"bootstrap.servers": "kafka-05.preprod.itass.local:9092, kafka-03.preprod.itass.local:9092",
+consumer_config = {"bootstrap.servers": "kafka-05.preprod.local:9092, kafka-03.preprod.local:9092",
                    "security.protocol": "SASL_PLAINTEXT",
                    "sasl.mechanism": "SCRAM-SHA-256",
                    "sasl.username": "username",
@@ -63,7 +63,7 @@ consumer_config = {"bootstrap.servers": "kafka-05.preprod.itass.local:9092, kafk
                    "enable.auto.commit": False,
                    "auto.offset.reset": 'earliest'}
 
-producer_config = {"bootstrap.servers": "kafka-05.preprod.itass.local:9092, kafka-03.preprod.itass.local:9092",
+producer_config = {"bootstrap.servers": "kafka-05.preprod.local:9092, kafka-03.preprod.local:9092",
                    "security.protocol": "SASL_PLAINTEXT",
                    "sasl.mechanism": "SCRAM-SHA-256",
                    "sasl.username": "username",
